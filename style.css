@@ -1,0 +1,317 @@
+body {
+    background-color: rgb(41, 37, 37);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: aliceblue
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0.5px;
+    
+}
+
+.cabecalho-sub-titulo {
+    font-size: 1.3rem;
+    color: rgb(71, 71, 224);
+    
+}
+
+h2 {
+    font-size: 40px;
+    color: white;
+}
+
+.foto-perfil {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 71, 238, 0.8);
+    border-radius: 50%;
+    border: 4px solid rgb(255, 245, 245);
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+/*Cabeçalho centralizado verticalmente*/
+.cabecalho {
+    min-height: 100vh;
+    /*deve ter no mínimo a altura total da tela do dispositivo (100% da viewport height)para garantir que uma seção ocupe toda a altura visível da página, mesmo que o conteúdo interno seja menor.. */
+    display: flex;
+    /* transforma um elemento em um container flexível,Isso permite alinhar, distribuir e organizar os itens filhos com muito mais controle e facilidade em layouts responsivos.*/
+    justify-content: center;
+    /* alinha os itens no centro do container ao longo do eixo principal */
+    align-items: center;
+    flex-direction: column;
+    /*organizar os itens de um container flexível na vertical*/
+}
+
+h3 {
+    color: white;
+}
+
+.github {
+    padding: 10px 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.btn-primary {
+    transition: all 0.3s ease;
+    background-color: rgb(72, 63, 63);
+    border-radius: 40px;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(17, 58, 205);
+    text-decoration: none;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.entre_em_contato {
+    text-align: center;
+}
+
+.navegacao {
+    position: fixed;
+    /*para o menu ficar fixado*/
+    top: 0;
+    background-color: rgba(40, 45, 56, 0.8);
+    width: 100%;
+    z-index: 1000;
+    /*define a ordem de empilhamento de um elemento, fazendo com que ele fique acima de outros com z-index menor. É útil para sobrepor elementos como menus, pop-ups ou modais no layout da página.*/
+    padding: 0.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    /*para tirar as bolinhas do li */
+    gap: 3rem;
+
+}
+
+.menu a:hover {
+    background-color: rgb(49, 61, 71);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-link {
+    text-decoration: none;
+    /* remove sublinhado em links */
+    color: aliceblue;
+    position: relative;
+    /*posiciona um elemento em relação à sua posição original no fluxo da página.*/
+    padding: 0.5rem;
+}
+
+.btn-primary:focus,
+.menu-link:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: rgb(43, 42, 42);
+    color: white;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(41, 44, 47);
+    border-radius: 15px;
+    margin: 20px auto;
+    overflow: inline-block;
+    display: inline-block;
+    /* faz com que um elemento se comporte como um bloco, mas sem quebrar a linha — ou seja, ele pode ficar ao lado de outros elementos na mesma linha*/
+    vertical-align: top;
+    /*alinha um elemento ao topo de seu contêiner ou em relação ao conteúdo da linha.*/
+    height: 400px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03)
+}
+
+
+
+@media(max-width: 768px) {
+    .card {
+        width: 90%;
+        margin: 20px auto;
+
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Sobre {
+    padding: 6rem 2rem;
+}
+
+.Sobre-titulo {
+    font-size: 3rem;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.Sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid rgb(87, 87, 185);
+    backdrop-filter: blur(10px);
+    /* aplica um efeito de desfoque (blur) ao fundo de um elemento, afetando tudo que está atrás dele, criando um efeito visual suave.*/
+    background: rgba(54, 60, 73, 0.8);
+}
+
+.Sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.galeria {
+    padding: 6rem 2rem;
+}
+
+.galeria-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    /* é usada para ajustar o conteúdo de uma imagem ou vídeo dentro de um container, garantindo que ela cubra todo o espaço disponível*/
+}
+
+.galeria-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.galeria-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*define as colunas em um layout de grid, criando um número flexível de colunas,faz com que o número de colunas se ajuste automaticamente com base no tamanho do container, garante que cada coluna tenha um tamanho mínimo de 300px, mas pode se expandir até ocupar uma fração do espaço disponível (1fr). */
+    gap: 2rem;
+    /* define o espaçamento entre os itens em um layout de grid ou flexbox. */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-card:hover {
+    box-shadow: 0 10px 20px rgb(88, 236, 236);
+    transform: translateY(-10px) scale(1.03);
+    /* aplica duas transformações a um elemento. A função translateY(-10px) move o elemento 10 pixels para cima ao longo do eixo vertical. Já a função scale(1.03) aumenta o tamanho do elemento em 3%, tornando-o ligeiramente maior*/
+
+}
+
+.galeria-card {
+    background: rgb(43, 42, 58);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    /*uma leve luz atras com desfoque*/
+    border: 1px solid rgb(56, 56, 117);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    /*define uma transição suave para todas as propriedades que mudarem no elemento durante uma interação (como hover, focus, etc.)*/
+}
+
+.info-galeria {
+    margin-bottom: 5px;
+}
+
+.paragrafo-galeria {
+    color: rgb(170, 202, 231);
+    line-height: 1.30rem;
+    /*define a altura da linha do texto, ou seja, o espaço vertical entre as linhas de um parágrafo.*/
+}
+
+.caixa-textos-galeria {
+    padding: 1.5rem;
+
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.titulo-contato {
+
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.carousel-inner img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+#carouselGaleria{
+    border-radius: 20px;
+    height: 600px;
+    width: 80%;
+
+}
+
+.paragrafo-carousel {
+    color: rgb(250, 250, 250);
+    font-size: 1.0rem;
+}
+* {
+    box-sizing: border-box;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60% 60%;
+}
+body.tema-claro {
+    background-color: rgb(255, 255, 255);
+    color: rgb(41, 37, 37);
+}
+
+body.tema-claro a {
+    color: rgb(0, 0, 0);
+}
+
+body.tema-claro h1 {
+    color: rgb(0, 0, 0);
+}
+
+/* Adicione estilos para outros elementos como .cabecalho-sub-titulo, h2, .Sobre-titulo, etc. */
