@@ -101,7 +101,7 @@ h3 {
     justify-content: center;
     list-style: none;
     /*para tirar as bolinhas do li */
-    gap: 3rem;
+    gap: 4rem;
 
 }
 
@@ -112,18 +112,20 @@ h3 {
 }
 
 .menu-link {
-    text-decoration: none;
+    text-decoration:none;
     /* remove sublinhado em links */
     color: aliceblue;
     position: relative;
     /*posiciona um elemento em relação à sua posição original no fluxo da página.*/
     padding: 0.5rem;
+   
 }
 
 .btn-primary:focus,
 .menu-link:focus {
     outline: 2px solid #fff;
     outline-offset: 2px;
+    
 }
 
 
@@ -314,4 +316,5 @@ body.tema-claro h1 {
     color: rgb(0, 0, 0);
 }
 
-/* Adicione estilos para outros elementos como .cabecalho-sub-titulo, h2, .Sobre-titulo, etc. */
+
+
