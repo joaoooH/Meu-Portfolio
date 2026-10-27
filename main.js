@@ -56,4 +56,6 @@ window.onload = function() {
     // Multiplicamos o comprimento do texto do título pela velocidade de digitação para obter o tempo estimado
     // que leva para o título ser digitado, e adicionamos um pequeno atraso extra de 500 milissegundos.
     setTimeout(digitarSubtitulo, textoTitulo.length * velocidadeDigitar + 500);
-}
+};
+// script.js (ou main.js)
+
